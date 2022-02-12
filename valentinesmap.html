@@ -35,6 +35,43 @@
                     zoom: 5, // Zoom level
                     container: "viewDiv" // Div element
                 });
+
+                const graphicsLayer = new GraphicsLayer();
+                map.add(graphicsLayer);
+                
+                //Create a point
+                const point = { 
+                    type: "point",
+                    longitude: -108.37489175514848,
+                    latitude: 43.06698909869485
+                };
+                const simpleMarkerSymbol = {
+                    type: "simple-marker",
+                    color: [30, 144, 255],  // Dodger
+                    outline: {
+                        color: [255, 255, 255], // White
+                        width: 1
+                    }
+                };
+
+                const point = { 
+                    type: "point",
+                    longitude: -118.80657463861,
+                    latitude: 34.0005930608889
+                };
+                const simpleMarkerSymbol = {
+                    type: "simple-marker",
+                    color: [226, 119, 40],  // Orange
+                    outline: {
+                        color: [255, 255, 255], // White
+                        width: 1
+                    }
+                };
+                const pointGraphic = new Graphic({
+                    geometry: point,
+                    symbol: simpleMarkerSymbol
+                });
+                graphicsLayer.add(pointGraphic);
       
             });
         </script>
