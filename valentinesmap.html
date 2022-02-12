@@ -40,7 +40,7 @@
                 const graphicsLayer = new GraphicsLayer();
                 map.add(graphicsLayer);
                 
-                //Create point #2
+                //Create point #1 - Brokeback Mountain
                 const point1 = { 
                     type: "point",
                     longitude: -108.37489175514848,
@@ -70,11 +70,11 @@
                 });
                 graphicsLayer.add(pointGraphic1);
 
-                // Create point #2
+                // Create point #2 - Love, Simon
                 const point2 = { 
                     type: "point",
-                    longitude: -118.80657463861,
-                    latitude: 34.0005930608889
+                    longitude: -84.37792567343384,
+                    latitude: 33.83303752191236
                 };
                 const simpleMarkerSymbol2 = {
                     type: "simple-marker",
@@ -84,10 +84,21 @@
                         width: 1
                     }
                 };
+                const popupTemplate2 = {
+                    title: "{Name}",
+                    content: "{Description}"
+                }
+                const attributes2 = {
+                    Name: "Love, Simon (2018)",
+                    Description: "Similar to the novel 'Simon vs. the Homo Sapiens Agenda' by Becky Albertalli which the movie is based on, the movie is set in Atlanta, Georgia. Atlanta International School is featured in many scenes as Simon's school."
+                }
                 const pointGraphic2 = new Graphic({
                     geometry: point2,
-                    symbol: simpleMarkerSymbol2
+                    symbol: simpleMarkerSymbol2,
+                    attributes: attributes2,
+                    popupTemplate: popupTemplate2
                 });
+                
                 graphicsLayer.add(pointGraphic2);
       
             });
