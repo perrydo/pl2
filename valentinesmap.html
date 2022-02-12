@@ -40,13 +40,13 @@
                 const graphicsLayer = new GraphicsLayer();
                 map.add(graphicsLayer);
                 
-                //Create a point
-                const point = { 
+                //Create point #2
+                const point1 = { 
                     type: "point",
                     longitude: -108.37489175514848,
                     latitude: 43.06698909869485
                 };
-                const simpleMarkerSymbol = {
+                const simpleMarkerSymbol1 = {
                     type: "simple-marker",
                     color: [30, 144, 255],  // Dodger
                     outline: {
@@ -54,9 +54,19 @@
                         width: 1
                     }
                 };
-                const pointGraphic = new Graphic({
-                    geometry: point,
-                    symbol: simpleMarkerSymbol
+                const popupTemplate1 = {
+                    title: "{Name}",
+                    content: "{Description}"
+                }
+                const attributes1 = {
+                    Name: "Brokeback Mountain (2005)",
+                    Description: "While Brokeback Mountain is a fictional location, much of the movie is  set in Riverton, a real town in the Big Horn Mountains of central Wyoming."
+                }
+                const pointGraphic1 = new Graphic({
+                    geometry: point1,
+                    symbol: simpleMarkerSymbol1,
+                    attributes: attributes1,
+                    popupTemplate: popupTemplate1
                 });
                 graphicsLayer.add(pointGraphic);
 
