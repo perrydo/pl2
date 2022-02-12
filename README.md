@@ -1,4 +1,4 @@
-# Developers Details Item Page
+# ArcGIS Online Developers
 
 ## Developers Details Item Page
 
