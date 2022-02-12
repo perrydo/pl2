@@ -32,7 +32,7 @@
 
                 const view = new MapView({
                     map: map,
-                    center: [-94.5866466809691, 39.09758806658541], // Longitude, latitude
+                    center: [-94.51396823230506, 37.086823821674564], // Longitude, latitude
                     zoom: 5, // Zoom level
                     container: "viewDiv" // Div element
                 });
@@ -131,6 +131,37 @@
                 });
                 
                 graphicsLayer.add(pointGraphic3);
+
+                // Create point #4 - The Kids Are Alright
+                const point4 = { 
+                    type: "point",
+                    longitude: -118.20949212978049,
+                    latitude: 34.12746078053712
+                };
+                const simpleMarkerSymbol4 = {
+                    type: "simple-marker",
+                    color: [255, 255, 0],  // Yellow
+                    outline: {
+                        color: [255, 255, 255], // White
+                        width: 1
+                    }
+                };
+                const popupTemplate4 = {
+                    title: "{Name}",
+                    content: "{Description}"
+                }
+                const attributes4 = {
+                    Name: "The Kids Are Alright (2010)",
+                    Description: "Starring	Annette Bening, Julianne Moore, Mark Ruffalo, Mia Wasikowska and Josh Hutcherson, 'The Kids Are Alright' tells the story of Joni and Laser, two children of a lesbian couple conceived by artificial insemination, bring their biological father into their non-traditional family life. Filmed entirely in the city of Los Angeles, the movie features Occidental College near the end, when the family sends Joni off to college."
+                }
+                const pointGraphic4 = new Graphic({
+                    geometry: point4,
+                    symbol: simpleMarkerSymbol4,
+                    attributes: attributes4,
+                    popupTemplate: popupTemplate4
+                });
+                
+                graphicsLayer.add(pointGraphic4);
       
             });
         </script>
