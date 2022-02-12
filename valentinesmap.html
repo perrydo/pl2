@@ -60,7 +60,7 @@
                 }
                 const attributes1 = {
                     Name: "Brokeback Mountain (2005)",
-                    Description: "Starring stars Heath Ledger, Jake Gyllenhaal, Anne Hathaway, and Michelle Williams, 'Brokeback Mountain' depicts the complex romantic relationship between two American cowboys, Ennis Del Mar and Jack Twist, in the American West from 1963 to 1983. While Brokeback Mountain is a fictional location, much of the movie is  set in Riverton, a real town in the Big Horn Mountains of central Wyoming."
+                    Description: "Starring Heath Ledger, Jake Gyllenhaal, Anne Hathaway, and Michelle Williams, 'Brokeback Mountain' depicts the complex romantic relationship between two American cowboys, Ennis Del Mar and Jack Twist, in the American West from 1963 to 1983. While Brokeback Mountain is a fictional location, much of the movie is  set in Riverton, a real town in the Big Horn Mountains of central Wyoming."
                 }
                 const pointGraphic1 = new Graphic({
                     geometry: point1,
@@ -193,6 +193,37 @@
                 });
                 
                 graphicsLayer.add(pointGraphic5);
+                                
+                // Create point #6 - Happiest Season
+                const point6 = { 
+                    type: "point",
+                    longitude: -79.96010310393265,
+                    latitude: 40.47098341552697
+                };
+                const simpleMarkerSymbol6 = {
+                    type: "simple-marker",
+                    color: [34, 139, 34],  // Forest green
+                    outline: {
+                        color: [255, 255, 255], // White
+                        width: 1
+                    }
+                };
+                const popupTemplate6 = {
+                    title: "{Name}",
+                    content: "{Description}"
+                }
+                const attributes6 = {
+                    Name: "Happiest Season (2020)",
+                    Description: "Starring Kristen Stewart, Mackenzie Davis, Alison Brie, Aubrey Plaza, Dan Levy, Mary Holland, Victor Garber, and Mary Steenburgen, 'Happiest Season' follows a woman who struggles to come out to her conservative parents while she and her girlfriend visit them during Christmas. The film is set in and around Pittsburgh, with The Vandal coffee shop in the Lawrenceville neighborhood featured near the beginning of the film."
+                }
+                const pointGraphic6 = new Graphic({
+                    geometry: point6,
+                    symbol: simpleMarkerSymbol6,
+                    attributes: attributes6,
+                    popupTemplate: popupTemplate6
+                });
+                
+                graphicsLayer.add(pointGraphic6);
       
             });
         </script>
