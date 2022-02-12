@@ -102,12 +102,12 @@
                 graphicsLayer.add(pointGraphic2);
 
                 // Create point #3 - Moonlight
-                const point2 = { 
+                const point3 = { 
                     type: "point",
                     longitude: -80.18422251779997,
                     latitude: 25.84162773927329
                 };
-                const simpleMarkerSymbol2 = {
+                const simpleMarkerSymbol3 = {
                     type: "simple-marker",
                     color: [148, 0, 211],  // Dark violet
                     outline: {
@@ -115,22 +115,22 @@
                         width: 1
                     }
                 };
-                const popupTemplate2 = {
+                const popupTemplate3 = {
                     title: "{Name}",
                     content: "{Description}"
                 }
-                const attributes2 = {
+                const attributes3 = {
                     Name: "Moonlight (2016)",
                     Description: "Starring Trevante Rhodes, André Holland, Janelle Monáe, Ashton Sanders, Jharrel Jerome, Naomie Harris, and Mahershala Ali, 'Moonlight' depicts the life of Chiron, a young black gay man growing up in Miami. Jimmy's Eastside Diner is predominantly featured in the third act of the movie, where Chiron reunites with Kevin, his lifelong romantic interest."
                 }
-                const pointGraphic2 = new Graphic({
-                    geometry: point2,
-                    symbol: simpleMarkerSymbol2,
-                    attributes: attributes2,
-                    popupTemplate: popupTemplate2
+                const pointGraphic3 = new Graphic({
+                    geometry: point3,
+                    symbol: simpleMarkerSymbol3,
+                    attributes: attributes3,
+                    popupTemplate: popupTemplate3
                 });
                 
-                graphicsLayer.add(pointGraphic2);
+                graphicsLayer.add(pointGraphic3);
       
             });
         </script>
