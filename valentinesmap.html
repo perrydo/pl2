@@ -152,7 +152,7 @@
                 }
                 const attributes4 = {
                     Name: "The Kids Are Alright (2010)",
-                    Description: "Starring	Annette Bening, Julianne Moore, Mark Ruffalo, Mia Wasikowska and Josh Hutcherson, 'The Kids Are Alright' tells the story of Joni and Laser, two children of a lesbian couple conceived by artificial insemination, bring their biological father into their non-traditional family life. Filmed entirely in the city of Los Angeles, the movie features Occidental College near the end, when the family sends Joni off to college."
+                    Description: "Starring Annette Bening, Julianne Moore, Mark Ruffalo, Mia Wasikowska and Josh Hutcherson, 'The Kids Are Alright' tells the story of Joni and Laser, two children of a lesbian couple conceived by artificial insemination, bring their biological father into their non-traditional family life. Filmed entirely in the city of Los Angeles, the movie features Occidental College near the end, when the family sends Joni off to college."
                 }
                 const pointGraphic4 = new Graphic({
                     geometry: point4,
@@ -162,6 +162,37 @@
                 });
                 
                 graphicsLayer.add(pointGraphic4);
+                
+                // Create point #5 - To Wong Foo, Thanks for Everything! Julie Newmar 
+                const point5 = { 
+                    type: "point",
+                    longitude: -73.98923817694003,
+                    latitude: 40.73191863940208
+                };
+                const simpleMarkerSymbol5 = {
+                    type: "simple-marker",
+                    color: [255, 140, 0],  // Dark orange
+                    outline: {
+                        color: [255, 255, 255], // White
+                        width: 1
+                    }
+                };
+                const popupTemplate5 = {
+                    title: "{Name}",
+                    content: "{Description}"
+                }
+                const attributes5 = {
+                    Name: "To Wong Foo, Thanks for Everything! Julie Newmar (1995)",
+                    Description: "Starring Wesley Snipes, Patrick Swayze, and John Leguizamo as three New York City drag queens who embark on a road trip, 'To Wong Foo, Thanks for Everything! Julie Newmar' begins at the historic Webster Hall, New York City. The location holds the fictional New York City's 'Drag Queen of the Year' contest, where Noxeema Jackson and Vida Boheme ties for winning a trip to Hollywood to take part in the even bigger 'Miss Drag Queen of America Pageant'."
+                }
+                const pointGraphic5 = new Graphic({
+                    geometry: point5,
+                    symbol: simpleMarkerSymbol5,
+                    attributes: attributes5,
+                    popupTemplate: popupTemplate5
+                });
+                
+                graphicsLayer.add(pointGraphic5);
       
             });
         </script>
